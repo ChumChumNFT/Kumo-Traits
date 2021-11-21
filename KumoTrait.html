@@ -1,0 +1,189 @@
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Traits..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:33%;">Trait Type</th>
+    <th style="width:33%;">Trait</th>
+    <th style="width:33%;">Amount</th>
+  </tr>
+  <tr>
+    <td>Unique</td>
+    <td>The Gatekeeper</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Buddha</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Guanyin</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Tsukuyomi</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Asuka</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Hibiki</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Ashai</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Ra</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Bastet</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Anubis</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Pirate Captain</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Pirate Walrus</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Pirate Fish</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Ninja Master</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Right Hand Ninja</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Left Hand Ninja</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Frieda</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Kahlo</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Yayoi Kusama</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Salvador Dahli</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Foodie Town Head Chef</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Foodie Town Mayor</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Foodie Town Mayor's Wife</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Harajuku Biker</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Harajuku Zen</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Harajuku Sweet Tooth</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Monkey King</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Clumsy Ape</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Cool Ape</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Clumsy Creative</td>
+    <td>1</td>
+  </tr>
+    <tr>
+    <td>Unique</td>
+    <td>Happy Harajuku</td>
+    <td>1</td>
+  </tr>
+  
+</table>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
